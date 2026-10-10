@@ -172,7 +172,7 @@ h3 { font-size: 1.35rem; }
 .mill-photo img {
   width: 100%;
   height: auto;
-  aspect-ratio: 960 / 282;
+  aspect-ratio: 2000 / 586;
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
