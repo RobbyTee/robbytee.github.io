@@ -202,7 +202,7 @@ h3 { font-size: 1.35rem; }
 .contact-list { list-style: none; padding: 0; margin: 28px 0 0; }
 .contact-list li { padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.08); display: flex; gap: 16px; flex-wrap: wrap; }
 .contact-list span { font-weight: 700; min-width: 80px; color: var(--slate); }
-.contact-form { background: #fff; padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow); display: grid; gap: 16px; }
+.contact-form { position: relative; background: #fff; padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow); display: grid; gap: 16px; }
 .contact-form label { display: grid; gap: 6px; font-weight: 600; font-size: .95rem; }
 .contact-form input, .contact-form select, .contact-form textarea {
   font: inherit;
@@ -233,7 +233,18 @@ h3 { font-size: 1.35rem; }
   color: var(--slate);
   font-weight: 600;
 }
-.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* !important so form-field styles (e.g. width: 100%) can't make hidden fields stretch the page */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+}
 
 /* Footer */
 .site-footer { background: var(--slate); color: var(--cream); padding: 48px 0; text-align: center; }
