@@ -40,7 +40,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 // Contact form: sent through FormSubmit's AJAX endpoint so the visitor stays on
 // the page and we can show FormSubmit's real answer (success or the reason it failed).
-const FORM_ENDPOINT = 'https://formsubmit.co/ajax/sales@draytontech.org';
+// TODO: switch back to sales@draytontech.org (here and in index.html) before launch
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/robertet4@gmail.com';
 const form = document.getElementById('contact-form');
 const button = form.querySelector('button[type="submit"]');
 const success = document.getElementById('form-success');
