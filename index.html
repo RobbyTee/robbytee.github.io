@@ -133,7 +133,17 @@
             <li><span>Based in</span>Spartanburg, South Carolina</li>
           </ul>
         </div>
-        <form class="contact-form" id="contact-form" action="mailto:sales@draytontech.org" method="post" enctype="text/plain">
+        <form class="contact-form" id="contact-form" action="https://formsubmit.co/sales@draytontech.org" method="POST">
+          <!-- FormSubmit (https://formsubmit.co). script.js sends this via FormSubmit's AJAX endpoint;
+               the plain POST above is the fallback when JavaScript is off. -->
+          <input type="hidden" name="_subject" value="New website enquiry from draytontech.org">
+          <input type="hidden" name="_template" value="table">
+          <!-- _next is set to this page's own URL by script.js, so previews return to the preview -->
+          <input type="hidden" name="_next" value="https://robbytee.github.io/?sent=1#contact">
+          <!-- spam trap: real visitors never see or fill this -->
+          <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="form-success" id="form-success" role="status" hidden>Thanks! Your message is on its way. We'll reply within one business day.</p>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
           <label>Name<input name="name" required autocomplete="name"></label>
           <label>Email<input type="email" name="email" required autocomplete="email"></label>
           <label>What do you need?
@@ -144,7 +154,7 @@
               <option>Something else</option>
             </select>
           </label>
-          <label>Message<textarea name="message" rows="4"></textarea></label>
+          <label>Message<textarea name="message" rows="4" required></textarea></label>
           <button class="btn" type="submit">Send message</button>
         </form>
       </div>
