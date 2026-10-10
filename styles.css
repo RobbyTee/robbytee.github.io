@@ -265,7 +265,7 @@ h3 { font-size: 1.35rem; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .steps { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr; }
-  /* taller crop on phones so the buildings are not a thin strip */
-  .mill-photo img { aspect-ratio: 2 / 1; object-position: 40% center; }
+  /* phones load the mill-and-towers crop (see <picture> in index.html) */
+  .mill-photo img { aspect-ratio: 620 / 360; }
   .card, .contact-form { padding: 24px; }
 }

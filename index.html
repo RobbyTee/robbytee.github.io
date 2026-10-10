@@ -78,10 +78,14 @@
     <section id="mill" class="mill">
       <div class="container mill-inner">
         <figure class="mill-photo reveal">
-          <img src="assets/img/drayton-mill-panorama-1400.jpg"
-               srcset="assets/img/drayton-mill-panorama-800.jpg 800w, assets/img/drayton-mill-panorama-1400.jpg 1400w, assets/img/drayton-mill-panorama-2000.jpg 2000w"
-               sizes="(min-width: 2100px) 2000px, 94vw"
-               alt="Drayton Mill campus in Spartanburg: red-brick mill buildings and twin water towers under a blue sky" width="2000" height="586" loading="lazy">
+          <picture>
+            <!-- phones: a tighter crop of the main mill and water towers -->
+            <source media="(max-width: 720px)" srcset="assets/img/drayton-mill-towers.jpg" width="620" height="360">
+            <img src="assets/img/drayton-mill-panorama-1400.jpg"
+                 srcset="assets/img/drayton-mill-panorama-800.jpg 800w, assets/img/drayton-mill-panorama-1400.jpg 1400w, assets/img/drayton-mill-panorama-2000.jpg 2000w"
+                 sizes="(min-width: 2100px) 2000px, 94vw"
+                 alt="Drayton Mill in Spartanburg: the red-brick mill building and its twin water towers under a blue sky" width="2000" height="586" loading="lazy">
+          </picture>
         </figure>
         <div class="mill-copy reveal">
           <div class="mill-text">
