@@ -178,13 +178,8 @@ h3 { font-size: 1.35rem; }
   box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
   background: var(--slate-2);
 }
-.mill-copy { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 120px); align-items: start; }
-.mill-text { max-width: 46rem; }
-.mill-text p { opacity: .9; }
-.facts { display: grid; gap: 24px; margin: 0; }
-.facts div { border-left: 3px solid var(--signal); padding-left: 14px; }
-.facts dt { font-family: var(--serif); font-size: 1.8rem; color: #fff; }
-.facts dd { margin: 0; font-size: .9rem; opacity: .75; }
+.mill-copy { max-width: 46rem; }
+.mill-copy p { opacity: .9; }
 
 /* Process */
 .steps { list-style: none; padding: 0; margin: 40px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; counter-reset: step; }
@@ -286,8 +281,6 @@ h3 { font-size: 1.35rem; }
   .cards { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr 1fr; }
-  .mill-copy { grid-template-columns: 1fr; }
-  .facts { grid-template-columns: repeat(3, 1fr); }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
 }
 @media (max-width: 720px) {
@@ -312,7 +305,6 @@ h3 { font-size: 1.35rem; }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .steps { grid-template-columns: 1fr; }
-  .facts { grid-template-columns: 1fr; }
   /* phones load the mill-and-towers crop (see <picture> in index.html) */
   .mill-photo img { aspect-ratio: 620 / 360; }
   .card, .contact-form { padding: 24px; }
