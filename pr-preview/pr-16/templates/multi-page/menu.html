@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo site for a fictional business: keep it out of search results (remove for a real customer) -->
+  <meta name="robots" content="noindex">
+  <!-- CUSTOMIZE: page title and description -->
+  <title>Menu | Hearth &amp; Grain Bakehouse</title>
+  <meta name="description" content="Coffee, bread and pastry from Hearth &amp; Grain Bakehouse, baked fresh every morning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <!-- CUSTOMIZE: business name (same on every page) -->
+      <a class="brand" href="index.html">Hearth <span>&amp;</span> Grain</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" aria-current="page">Menu</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="visit.html" class="btn btn-small">Visit us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero" style="--photo: url('img/gallery-3.jpg')">
+      <div class="container">
+        <p class="eyebrow">The menu</p>
+        <h1>Baked this morning. Gone by this afternoon.</h1>
+        <p class="lead">A short list, done well. The case changes with the seasons, so ask what's fresh.</p>
+      </div>
+    </section>
+
+    <!-- CUSTOMIZE: menu items and prices -->
+    <section class="section">
+      <div class="container">
+        <div class="menu-block">
+          <figure class="menu-photo" style="margin:0">
+            <img src="img/feature-coffee.jpg" alt="A latte with rosetta art beside a cup of black coffee" width="900" height="675" loading="lazy">
+          </figure>
+          <div>
+            <p class="eyebrow">Coffee bar</p>
+            <h2>Coffee worth slowing down for</h2>
+            <p>Small-lot beans, roasted for sweetness and pulled with care.</p>
+            <ul class="menu-list">
+              <li><span class="item">Espresso<span class="desc">Bright, syrupy, a little chocolatey</span></span><span class="price">$3.25</span></li>
+              <li><span class="item">Cortado<span class="desc">Equal parts espresso and silky milk</span></span><span class="price">$4.00</span></li>
+              <li><span class="item">Flat white<span class="desc">Our most-ordered drink, for good reason</span></span><span class="price">$4.75</span></li>
+              <li><span class="item">Pour-over<span class="desc">Ask what we're excited about this week</span></span><span class="price">$5.00</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-block">
+          <figure class="menu-photo" style="margin:0">
+            <img src="img/feature-bread.jpg" alt="Golden seeded baguettes on a baking tray" width="900" height="675" loading="lazy">
+          </figure>
+          <div>
+            <p class="eyebrow">Bread</p>
+            <h2>Bread with backbone</h2>
+            <p>Shaped by hand and baked dark, the way bread should be.</p>
+            <ul class="menu-list">
+              <li><span class="item">Country sourdough<span class="desc">18-hour ferment, crackling crust</span></span><span class="price">$9.00</span></li>
+              <li><span class="item">Baguette<span class="desc">Out of the oven every two hours</span></span><span class="price">$4.50</span></li>
+              <li><span class="item">Seeded rye<span class="desc">Sunflower, pumpkin and flax</span></span><span class="price">$10.00</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu-block">
+          <figure class="menu-photo" style="margin:0">
+            <img src="img/feature-pastry.jpg" alt="A flaky croissant on a wooden board" width="900" height="675" loading="lazy">
+          </figure>
+          <div>
+            <p class="eyebrow">Pastry</p>
+            <h2>Pastries that flake on contact</h2>
+            <p>Laminated by hand over three days, with real butter.</p>
+            <ul class="menu-list">
+              <li><span class="item">Butter croissant<span class="desc">The one that started it all</span></span><span class="price">$4.25</span></li>
+              <li><span class="item">Almond twice-baked<span class="desc">Frangipane, toasted almonds, powdered sugar</span></span><span class="price">$5.25</span></li>
+              <li><span class="item">Pain au chocolat<span class="desc">Two bars of dark chocolate, no skimping</span></span><span class="price">$4.75</span></li>
+              <li><span class="item">Seasonal tart<span class="desc">Whatever the farmers bring us</span></span><span class="price">$6.00</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span data-year>2026</span> Hearth &amp; Grain Bakehouse. Baked fresh daily.</p>
+      <!-- CUSTOMIZE: photo credits (author + license) when using someone else's photos -->
+      <p class="credits">Photography via Wikimedia Commons.</p>
+      <a href="#top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

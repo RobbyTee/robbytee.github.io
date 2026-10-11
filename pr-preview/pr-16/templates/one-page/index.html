@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo site for a fictional business: keep it out of search results (remove for a real customer) -->
+  <meta name="robots" content="noindex">
+  <!-- CUSTOMIZE: business name and one-line description (shows in search results) -->
+  <title>Hearth &amp; Grain Bakehouse | Fresh Bread, Pastry &amp; Coffee</title>
+  <meta name="description" content="A neighborhood bakehouse and coffee bar. Bread baked before sunrise, pastries with real butter, and coffee pulled by people who care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <!-- CUSTOMIZE: business name -->
+      <a class="brand" href="#top">Hearth <span>&amp;</span> Grain</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#story">Our story</a></li>
+        <li><a href="#menu">The menu</a></li>
+        <li><a href="#gallery">Inside</a></li>
+        <li><a href="#visit" class="btn btn-small">Visit us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- HERO — swap img/hero.jpg (wide, 2000px+) -->
+    <section class="hero" style="--photo: url('img/hero.jpg')">
+      <div class="container hero-inner">
+        <p class="eyebrow">Bakehouse &amp; coffee bar · Open early, every day</p>
+        <h1>Flour on our aprons since sunrise.</h1>
+        <p class="lead">Bread with a crackling crust, pastries that shatter at first bite, and a cup of coffee that tastes like someone was paying attention. Come hungry. Stay a while.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn">See what's baking</a>
+          <a href="#visit" class="btn btn-ghost">Find us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY — swap img/story.jpg -->
+    <section class="section" id="story">
+      <div class="container split">
+        <figure class="split-photo">
+          <img src="img/story.jpg" alt="Flour-dusted hands pressing seeds into a loaf of dough" width="1200" height="900" loading="lazy">
+        </figure>
+        <div class="split-text">
+          <p class="eyebrow">Our story</p>
+          <h2>Slow dough. Early mornings. No shortcuts.</h2>
+          <p>Every loaf starts the night before. We mix, fold and wait, giving the dough the hours it needs to build flavor that no mix or machine can fake. By the time the street lights click off, the ovens have been roaring for hours.</p>
+          <p>We bake in small batches, with flour from growers we know by name and butter that would make a Parisian blush. When it's gone, it's gone. That's how you know it's fresh.</p>
+          <ul class="facts">
+            <li><strong>4 a.m.</strong><span>First loaves in the oven</span></li>
+            <li><strong>18 hrs</strong><span>Of patience in every loaf</span></li>
+            <li><strong>0</strong><span>Preservatives, ever</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES — swap img/feature-*.jpg -->
+    <section class="section section-tint" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">What we're known for</p>
+          <h2>Three good reasons to set your alarm a little earlier</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="img/feature-coffee.jpg" alt="A latte with rosetta art beside a cup of black coffee on a weathered table" width="900" height="675" loading="lazy">
+            <div class="card-body">
+              <h3>Coffee worth slowing down for</h3>
+              <p>Small-lot beans, roasted for sweetness and pulled with care. Order a velvety flat white or a bright pour-over, or ask us what we're excited about this week.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/feature-bread.jpg" alt="Golden seeded baguettes cooling on a baking tray" width="900" height="675" loading="lazy">
+            <div class="card-body">
+              <h3>Bread with backbone</h3>
+              <p>Crackling baguettes, tangy sourdough and hearty seeded loaves, shaped by hand and baked dark the way bread should be. Grab one warm. We won't tell.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="img/feature-pastry.jpg" alt="A glossy, flaky croissant on a wooden board with a cappuccino" width="900" height="675" loading="lazy">
+            <div class="card-body">
+              <h3>Pastries that flake on contact</h3>
+              <p>Laminated by hand over three days. Buttery croissants, almond twice-bakes and a rotating case of seasonal treats that tend to vanish by noon.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAROUSEL — add, remove or swap <li class="slide"> items; dots build themselves -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">A look inside</p>
+          <h2>Pull up a chair. The coffee's on.</h2>
+        </div>
+        <div class="carousel" data-carousel data-interval="5500">
+          <ul class="carousel-track" aria-label="Photos from inside the shop (use the arrow keys to scroll)" tabindex="0">
+            <li class="slide">
+              <img src="img/gallery-1.jpg" alt="A bright café dining room with marble tables and woven bistro chairs" width="1600" height="1067">
+              <p class="caption">Plenty of seats, and nobody rushing you out of them.</p>
+            </li>
+            <li class="slide">
+              <img src="img/gallery-2.jpg" alt="Racks of almond and chocolate croissants fresh from the oven" width="1600" height="1067" loading="lazy">
+              <p class="caption">Fresh from the oven, rack after rack, every morning.</p>
+            </li>
+            <li class="slide">
+              <img src="img/gallery-3.jpg" alt="A glass case full of muffins, cakes, brownies and pastries" width="1600" height="1067" loading="lazy">
+              <p class="caption">The pastry case: dangerous before lunch, worse after.</p>
+            </li>
+            <li class="slide">
+              <img src="img/gallery-4.jpg" alt="An espresso served on a wooden tray with a sweet on the side" width="1600" height="1067" loading="lazy">
+              <p class="caption">Served the way it should be, with a little something on the side.</p>
+            </li>
+            <li class="slide">
+              <img src="img/gallery-5.jpg" alt="A cortado with leaf latte art in a glass on a saucer" width="1600" height="1067" loading="lazy">
+              <p class="caption">Latte art, because the details are the whole point.</p>
+            </li>
+            <li class="slide">
+              <img src="img/gallery-6.jpg" alt="A close-up of glossy, dark-roasted coffee beans" width="1600" height="1067" loading="lazy">
+              <p class="caption">Roasted for sweetness, ground the moment you order.</p>
+            </li>
+          </ul>
+          <button class="carousel-btn prev" type="button" aria-label="Previous photo">&#8249;</button>
+          <button class="carousel-btn next" type="button" aria-label="Next photo">&#8250;</button>
+          <div class="carousel-dots" role="group" aria-label="Choose a photo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT — CUSTOMIZE: address, phone, email, hours -->
+    <section class="section section-dark" id="visit">
+      <div class="container visit">
+        <div class="visit-intro">
+          <p class="eyebrow">Come say hello</p>
+          <h2>Follow the smell of fresh bread.</h2>
+          <p>Stop in for a loaf, call ahead for a big order, or drop us a line about catering and custom cakes. We'll put the kettle on.</p>
+        </div>
+        <div class="visit-grid">
+          <div class="info">
+            <h3>Find us</h3>
+            <address>
+              214 Mill Street<br>
+              Hometown, SC 29301
+            </address>
+            <a class="info-link" href="https://maps.google.com/?q=214+Mill+Street+Hometown+SC+29301" target="_blank" rel="noopener">Get directions &rarr;</a>
+          </div>
+          <div class="info">
+            <h3>Call or write</h3>
+            <p><a class="info-big" href="tel:+15550142290">(555) 014-2290</a></p>
+            <p><a class="info-big" href="mailto:hello@hearthandgrain.com">hello@hearthandgrain.com</a></p>
+          </div>
+          <div class="info">
+            <h3>Hours</h3>
+            <dl class="hours">
+              <dt>Mon – Fri</dt><dd>6:30 am – 3 pm</dd>
+              <dt>Saturday</dt><dd>7 am – 4 pm</dd>
+              <dt>Sunday</dt><dd>8 am – 2 pm</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span data-year>2026</span> Hearth &amp; Grain Bakehouse. Baked fresh daily.</p>
+      <!-- CUSTOMIZE: photo credits (author + license) when using someone else's photos -->
+      <p class="credits">Photography via Wikimedia Commons.</p>
+      <a href="#top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
