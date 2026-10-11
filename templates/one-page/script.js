@@ -14,6 +14,16 @@ links.addEventListener('click', (e) => {
   }
 });
 
+// Escape closes the mobile menu and returns focus to the menu button
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && links.classList.contains('open')) {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.focus();
+  }
+});
+
 // Footer year
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
@@ -29,6 +39,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let index = 0;
   let timer = null;
+  let paused = reduceMotion; // the visitor's choice; reduced-motion users never get autoplay
 
   const makeClone = (slide) => {
     const clone = slide.cloneNode(true);
@@ -58,6 +69,22 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     dotsWrap.appendChild(dot);
     return dot;
   });
+
+  // Pause / play: WCAG 2.2.2 requires a way to stop content that moves on its own
+  const pauseBtn = document.createElement('button');
+  pauseBtn.type = 'button';
+  pauseBtn.className = 'carousel-pause';
+  const showPauseState = () => {
+    pauseBtn.textContent = paused ? 'Play' : 'Pause';
+    pauseBtn.setAttribute('aria-label', paused ? 'Play slideshow' : 'Pause slideshow');
+  };
+  pauseBtn.addEventListener('click', () => {
+    paused = !paused;
+    showPauseState();
+    if (paused) stop(); else restart();
+  });
+  showPauseState();
+  if (!reduceMotion) dotsWrap.after(pauseBtn);
 
   function setActive(i) {
     index = (i + count) % count;
@@ -122,7 +149,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     if (e.key === 'ArrowRight') { goTo(index + 1); restart(); }
   });
 
-  function start() { if (!reduceMotion && !timer) timer = setInterval(() => goTo(index + 1), interval); }
+  function start() { if (!paused && !timer) timer = setInterval(() => goTo(index + 1), interval); }
   function stop() { clearInterval(timer); timer = null; }
   function restart() { stop(); start(); }
 
