@@ -215,6 +215,10 @@ h3 { font-size: 1.35rem; }
 .contact-list span { font-weight: 700; min-width: 80px; color: var(--slate); }
 .contact-form { position: relative; background: #fff; padding: 32px; border-radius: var(--radius); box-shadow: var(--shadow); display: grid; gap: 16px; }
 .contact-form label { display: grid; gap: 6px; font-weight: 600; font-size: .95rem; }
+.contact-form .req { color: #c0392b; font-weight: 700; }
+.form-key { margin: 0; font-size: .85rem; color: var(--muted); }
+/* only after the visitor has interacted, so the form doesn't start out red */
+.contact-form :is(input, textarea):user-invalid { border-color: #c0392b; background: #fdf3f2; }
 .contact-form input, .contact-form select, .contact-form textarea {
   font: inherit;
   font-weight: 400;
