@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CUSTOMIZE: page title and description -->
+  <title>Bright Nest Cleaning Co. | Build Your Cleaning &amp; Get an Instant Estimate</title>
+  <meta name="description" content="Home cleaning in the Spartanburg area. Pick your rooms and services, see a price estimate instantly, and request a cleaning in minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <!-- CUSTOMIZE: business name -->
+      <a class="brand" href="#top">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 15 16 5l12 10v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1z" fill="currentColor"/><path d="m16 12 1.6 3.4L21 17l-3.4 1.6L16 22l-1.6-3.4L11 17l3.4-1.6z" fill="#fff"/></svg>
+        Bright Nest <span>Cleaning Co.</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#estimate">Build your clean</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#request" class="btn btn-small">Request a cleaning</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Home cleaning · Spartanburg &amp; the Upstate</p>
+          <h1>Pick your rooms. See your price. Come home to clean.</h1>
+          <p class="lead">No phone tag and no "we'll have to see it first." Choose exactly what you want cleaned, room by room, and get an estimate before you ever talk to us.</p>
+          <div class="hero-actions">
+            <a href="#estimate" class="btn">Build your cleaning</a>
+            <a href="#how" class="btn btn-ghost">How it works</a>
+          </div>
+          <ul class="hero-trust">
+            <li>Insured &amp; background-checked</li>
+            <li>Supplies included</li>
+            <li>Happiness guarantee</li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 320 280">
+            <circle cx="170" cy="150" r="118" fill="var(--tint)"/>
+            <path d="M70 150 170 70l100 80v96a6 6 0 0 1-6 6H76a6 6 0 0 1-6-6z" fill="#fff" stroke="var(--ink)" stroke-width="6" stroke-linejoin="round"/>
+            <path d="M52 158 170 62l118 96" fill="none" stroke="var(--accent)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="148" y="190" width="44" height="62" rx="4" fill="var(--accent)"/>
+            <rect x="96" y="160" width="36" height="34" rx="4" fill="var(--sky)"/>
+            <rect x="208" y="160" width="36" height="34" rx="4" fill="var(--sky)"/>
+            <g fill="var(--sun)">
+              <path d="m252 54 6 14 14 6-14 6-6 14-6-14-14-6 14-6z"/>
+              <path d="m80 80 4 9 9 4-9 4-4 9-4-9-9-4 9-4z"/>
+              <path d="m286 120 3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="estimate" class="section estimator-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Instant estimate</p>
+          <h2>Build your cleaning</h2>
+          <p>Set how many of each room you have, then tick what you'd like done. Prices are per room, so your estimate adds up as you go.</p>
+        </div>
+
+        <!-- CUSTOMIZE: the disclaimer. The home size it mentions comes from HOME_SIZE in script.js. -->
+        <aside class="disclaimer" role="note">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16.5v.5"/></svg>
+          <p><strong>Prices are estimates for an average <span data-home-size>2,100</span> sq ft home.</strong> Larger homes, heavy buildup, lots of pet hair or a first-time deep clean can change the final price. We'll confirm your exact quote before we start, and you're never charged more than we agree on.</p>
+        </aside>
+
+        <div class="estimator">
+          <div class="rooms" id="rooms">
+            <noscript><p class="noscript">The estimator needs JavaScript. You can still <a href="#request">send us a request</a> and we'll quote by email.</p></noscript>
+          </div>
+
+          <aside class="summary" id="summary" aria-labelledby="summary-title">
+            <div class="summary-card">
+              <h3 id="summary-title">Your estimate</h3>
+
+              <fieldset class="frequency">
+                <legend>How often?</legend>
+                <div class="frequency-options" id="frequency"></div>
+              </fieldset>
+
+              <ul class="summary-lines" id="summary-lines"></ul>
+
+              <div class="summary-total">
+                <span>Estimated total</span>
+                <strong id="summary-total" aria-live="polite">$0</strong>
+              </div>
+              <p class="summary-note" id="summary-note"></p>
+
+              <a href="#request" class="btn btn-block" id="summary-cta">Request this cleaning</a>
+              <button type="button" class="link-button" id="reset">Start over</button>
+            </div>
+          </aside>
+        </div>
+
+        <div class="extras">
+          <h3>Whole-home extras</h3>
+          <p class="extras-intro">One price for the whole house, no matter how many rooms.</p>
+          <div class="extras-grid" id="extras"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section section-tint">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>Three steps to a clean house</h2>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="step-num">1</span>
+            <h3>Build it</h3>
+            <p>Choose your rooms and services above. Your estimate updates as you click, and your picks are saved on this device.</p>
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            <h3>Send it</h3>
+            <p>Request a day and time. Your exact selections come straight to us, so there's no re-explaining on the phone.</p>
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            <h3>Relax</h3>
+            <p>We confirm your quote within one business day, show up on time with all our own supplies, and leave it sparkling.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <p class="eyebrow">Questions</p>
+          <h2>Good to know</h2>
+        </div>
+        <!-- CUSTOMIZE: questions and answers -->
+        <div class="faq">
+          <details>
+            <summary>Why is it an estimate and not a fixed price?</summary>
+            <p>Our prices are based on an average 2,100 sq ft home in normal, lived-in condition. Bigger rooms, heavy buildup or a home that hasn't had a professional clean in a while take longer. We'll confirm your exact price before we start.</p>
+          </details>
+          <details>
+            <summary>Do I need to be home?</summary>
+            <p>Nope. Many customers leave a key or a door code. We'll text when we arrive and when we're done.</p>
+          </details>
+          <details>
+            <summary>Do you bring your own supplies?</summary>
+            <p>Yes, everything from vacuums to microfiber cloths. Choose "Eco-friendly products" in the extras if you'd like plant-based, fragrance-free cleaners.</p>
+          </details>
+          <details>
+            <summary>You really dust taxidermy?</summary>
+            <p>We really do. Mounts get a gentle once-over with soft brushes and low-suction tools, and we never use liquids or sprays on fur, feathers or antlers. Add it in the Den / office card.</p>
+          </details>
+          <details>
+            <summary>What if I'm not happy with something?</summary>
+            <p>Tell us within 24 hours and we'll come back and re-clean that area for free.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="request" class="section section-dark">
+      <div class="container request">
+        <div class="request-text">
+          <p class="eyebrow">Request a cleaning</p>
+          <h2>Send us your picks</h2>
+          <p>Your room-by-room selections and estimate are sent with this form, so we see exactly what you chose. We'll reply within one business day to confirm your price and time.</p>
+          <div class="request-summary" id="request-summary"></div>
+          <!-- CUSTOMIZE: contact details -->
+          <ul class="contact-list">
+            <li><span>Call or text</span> <a href="tel:+18645550123">(864) 555-0123</a></li>
+            <li><span>Email</span> <a href="mailto:hello@brightnestclean.example">hello@brightnestclean.example</a></li>
+            <li><span>Hours</span> Mon–Sat, 8am–6pm</li>
+          </ul>
+        </div>
+
+        <!-- CUSTOMIZE: FormSubmit endpoint. Use your own address or the private ID FormSubmit emails you
+             (the AJAX endpoint is set in script.js too). -->
+        <form class="request-form" id="request-form" action="https://formsubmit.co/b33ff50d0c99374a065a214a6e806cfe" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New cleaning request (estimate attached)">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <p class="form-success" id="form-success" role="status" hidden>Thanks! Your request and selections are on their way. We'll be in touch within one business day.</p>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+
+          <div class="form-row">
+            <label>Name<input name="Name" required autocomplete="name"></label>
+            <label>Phone<input type="tel" name="Phone" required autocomplete="tel" inputmode="tel"></label>
+          </div>
+          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          <div class="form-row">
+            <label>Street address<input name="Address" autocomplete="street-address"></label>
+            <label>ZIP code<input name="ZIP" required autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5"></label>
+          </div>
+          <div class="form-row">
+            <label>Home size (sq ft)<input name="Square footage" inputmode="numeric" placeholder="e.g. 2100"></label>
+            <label>Preferred date<input type="date" name="Preferred date" id="preferred-date" required></label>
+          </div>
+          <fieldset class="time-window">
+            <legend>Time window</legend>
+            <label><input type="radio" name="Time window" value="Morning (8am–12pm)" checked> Morning</label>
+            <label><input type="radio" name="Time window" value="Afternoon (12pm–5pm)"> Afternoon</label>
+            <label><input type="radio" name="Time window" value="Flexible"> Flexible</label>
+          </fieldset>
+          <label>Anything we should know?<textarea name="Notes" rows="3" placeholder="Pets, gate codes, problem areas…"></textarea></label>
+          <button class="btn btn-block" type="submit">Send my request</button>
+          <p class="form-fineprint">No payment now. Your estimate isn't a final price, and we'll confirm before booking.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><strong>Bright Nest Cleaning Co.</strong> · Spartanburg, SC</p>
+      <p class="small">&copy; <span data-year>2026</span> Bright Nest Cleaning Co. Demo site by <a href="../../">Drayton Technologies</a>.</p>
+    </div>
+  </footer>
+
+  <div class="mobile-bar" id="mobile-bar" hidden>
+    <div>
+      <span>Estimate</span>
+      <strong id="mobile-total">$0</strong>
+    </div>
+    <a href="#summary" class="btn btn-small">Review</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

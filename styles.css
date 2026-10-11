@@ -190,7 +190,7 @@ h3 { font-size: 1.35rem; }
 /* Band */
 /* Our work */
 .work { background: var(--cream); }
-.work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(24px, 2.5vw, 40px); }
+.work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 2.5vw, 40px); }
 .work-card {
   display: flex; flex-direction: column; background: #fff; border-radius: var(--radius); overflow: hidden;
   box-shadow: var(--shadow); color: inherit; text-decoration: none; transition: transform .2s, box-shadow .2s;
