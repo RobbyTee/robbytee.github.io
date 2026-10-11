@@ -196,29 +196,30 @@
           <input type="hidden" name="_template" value="table">
           <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
 
+          <p class="form-key"><span class="req" aria-hidden="true">*</span> Required field</p>
           <p class="form-success" id="form-success" role="status" hidden>Thanks! Your request and selections are on their way. We'll be in touch within one business day.</p>
           <p class="form-error" id="form-error" role="alert" hidden></p>
 
           <div class="form-row">
-            <label>Name<input name="Name" required autocomplete="name"></label>
-            <label>Phone<input type="tel" name="Phone" required autocomplete="tel" inputmode="tel"></label>
+            <label><span class="label-text">Name <span class="req" aria-hidden="true">*</span></span><input name="Name" required autocomplete="name"></label>
+            <label><span class="label-text">Phone <span class="req" aria-hidden="true">*</span></span><input type="tel" name="Phone" required autocomplete="tel" inputmode="tel"></label>
           </div>
-          <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          <label><span class="label-text">Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="email" required autocomplete="email"></label>
           <div class="form-row">
-            <label>Street address<input name="Address" autocomplete="street-address"></label>
-            <label>ZIP code<input name="ZIP" required autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5"></label>
+            <label><span class="label-text">Street address <span class="opt">(optional)</span></span><input name="Address" autocomplete="street-address"></label>
+            <label><span class="label-text">ZIP code <span class="req" aria-hidden="true">*</span></span><input name="ZIP" required autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" title="Please enter a 5-digit ZIP code."></label>
           </div>
           <div class="form-row">
-            <label>Home size (sq ft)<input name="Square footage" inputmode="numeric" placeholder="e.g. 2100"></label>
-            <label>Preferred date<input type="date" name="Preferred date" id="preferred-date" required></label>
+            <label><span class="label-text">Home size (sq ft) <span class="opt">(optional)</span></span><input name="Square footage" inputmode="numeric" placeholder="e.g. 2100"></label>
+            <label><span class="label-text">Preferred date <span class="req" aria-hidden="true">*</span></span><input type="date" name="Preferred date" id="preferred-date" required></label>
           </div>
           <fieldset class="time-window">
-            <legend>Time window</legend>
-            <label><input type="radio" name="Time window" value="Morning (8am–12pm)" checked> Morning</label>
+            <legend>Time window <span class="req" aria-hidden="true">*</span></legend>
+            <label><input type="radio" name="Time window" value="Morning (8am–12pm)" checked required> Morning</label>
             <label><input type="radio" name="Time window" value="Afternoon (12pm–5pm)"> Afternoon</label>
             <label><input type="radio" name="Time window" value="Flexible"> Flexible</label>
           </fieldset>
-          <label>Anything we should know?<textarea name="Notes" rows="3" placeholder="Pets, gate codes, problem areas…"></textarea></label>
+          <label><span class="label-text">Anything we should know? <span class="opt">(optional)</span></span><textarea name="Notes" rows="3" placeholder="Pets, gate codes, problem areas…"></textarea></label>
           <button class="btn btn-block" type="submit">Send my request</button>
           <p class="form-fineprint">No payment now. Your estimate isn't a final price, and we'll confirm before booking.</p>
         </form>

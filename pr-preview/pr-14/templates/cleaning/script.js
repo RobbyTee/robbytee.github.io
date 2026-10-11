@@ -420,8 +420,12 @@ form.addEventListener('submit', async (e) => {
   errBox.hidden = true;
 
   if (!form.checkValidity()) {
-    const bad = form.querySelector(':invalid');
-    showError(`Please check the "${bad.closest('label')?.firstChild.textContent.trim() || 'highlighted'}" field.`);
+    form.classList.add('was-validated'); // outlines the fields that still need attention
+    const bad = form.querySelector('input:invalid, textarea:invalid');
+    const name = bad.closest('label')?.querySelector('.label-text')?.firstChild.textContent.trim();
+    showError(bad.validity.valueMissing
+      ? `Please fill in the required "${name || 'highlighted'}" field.`
+      : bad.title || `Please check the "${name || 'highlighted'}" field.`);
     bad.focus();
     return;
   }
@@ -440,6 +444,7 @@ form.addEventListener('submit', async (e) => {
     const result = await res.json().catch(() => ({}));
     if (res.ok && String(result.success) === 'true') {
       form.reset();
+      form.classList.remove('was-validated');
       okBox.hidden = false;
       okBox.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     } else {
