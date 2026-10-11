@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo site for a fictional business: keep it out of search results (remove for a real customer) -->
+  <meta name="robots" content="noindex">
   <!-- CUSTOMIZE: page title and description -->
   <title>Hearth &amp; Grain Bakehouse | Fresh Bread, Pastry &amp; Coffee</title>
   <meta name="description" content="A neighborhood bakehouse and coffee bar. Bread baked before sunrise, pastries with real butter, and coffee pulled by people who care.">
@@ -12,6 +14,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <nav class="nav container" aria-label="Main">
       <!-- CUSTOMIZE: business name (same on every page) -->
@@ -28,7 +31,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="hero" style="--photo: url('img/hero.jpg')">
       <div class="container hero-inner">
         <p class="eyebrow">Bakehouse &amp; coffee bar · Open early, every day</p>

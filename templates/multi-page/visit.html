@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo site for a fictional business: keep it out of search results (remove for a real customer) -->
+  <meta name="robots" content="noindex">
   <!-- CUSTOMIZE: page title and description -->
   <title>Visit Us | Hearth &amp; Grain Bakehouse</title>
   <meta name="description" content="Hours, directions and contact details for Hearth &amp; Grain Bakehouse.">
@@ -12,6 +14,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <nav class="nav container" aria-label="Main">
       <!-- CUSTOMIZE: business name (same on every page) -->
@@ -28,7 +31,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="page-hero" style="--photo: url('img/gallery-4.jpg')">
       <div class="container">
         <p class="eyebrow">Visit us</p>
@@ -42,7 +45,7 @@
       <div class="container">
         <div class="visit-grid">
           <div class="info">
-            <h3>Find us</h3>
+            <h2>Find us</h2>
             <address>
               214 Mill Street<br>
               Hometown, SC 29301
@@ -50,12 +53,12 @@
             <a class="info-link" href="https://maps.google.com/?q=214+Mill+Street+Hometown+SC+29301" target="_blank" rel="noopener">Get directions &rarr;</a>
           </div>
           <div class="info">
-            <h3>Call or write</h3>
+            <h2>Call or write</h2>
             <p><a class="info-big" href="tel:+15550142290">(555) 014-2290</a></p>
             <p><a class="info-big" href="mailto:hello@hearthandgrain.com">hello@hearthandgrain.com</a></p>
           </div>
           <div class="info">
-            <h3>Hours</h3>
+            <h2>Hours</h2>
             <dl class="hours">
               <dt>Mon – Fri</dt><dd>6:30 am – 3 pm</dd>
               <dt>Saturday</dt><dd>7 am – 4 pm</dd>

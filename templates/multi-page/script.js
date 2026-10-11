@@ -14,5 +14,15 @@ links.addEventListener('click', (e) => {
   }
 });
 
+// Escape closes the mobile menu and returns focus to the menu button
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && links.classList.contains('open')) {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.focus();
+  }
+});
+
 // Footer year
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
