@@ -1,7 +1,0 @@
-# SITE_URL: update the sitemap address if the site moves to its own domain
-User-agent: *
-# Pull-request previews are temporary copies of the site
-Disallow: /pr-preview/
-Disallow: /templates/*/pr-preview/
-
-Sitemap: https://robbytee.github.io/sitemap.xml
