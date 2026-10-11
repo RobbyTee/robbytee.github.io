@@ -17,6 +17,13 @@ function setMenu(open) {
   toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 }
 toggle.addEventListener('click', () => setMenu(!links.classList.contains('open')));
+// Escape closes the mobile menu and returns focus to the menu button
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && links.classList.contains('open')) {
+    setMenu(false);
+    toggle.focus();
+  }
+});
 links.addEventListener('click', (e) => {
   if (e.target.closest('a')) setMenu(false);
 });

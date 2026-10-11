@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Demo site for a fictional business: keep it out of search results (remove for a real customer) -->
+  <meta name="robots" content="noindex">
   <!-- CUSTOMIZE: page title and description -->
   <title>Bright Nest Cleaning Co. | Build Your Cleaning &amp; Get an Instant Estimate</title>
   <meta name="description" content="Home cleaning in the Spartanburg area. Pick your rooms and services, see a price estimate instantly, and request a cleaning in minutes.">
@@ -12,6 +14,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <nav class="nav container" aria-label="Main">
       <!-- CUSTOMIZE: business name -->
@@ -31,7 +34,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
@@ -234,13 +237,13 @@
     </div>
   </footer>
 
-  <div class="mobile-bar" id="mobile-bar" hidden>
+  <aside class="mobile-bar" id="mobile-bar" aria-label="Estimate total" hidden>
     <div>
       <span>Estimate</span>
       <strong id="mobile-total">$0</strong>
     </div>
     <a href="#summary" class="btn btn-small">Review</a>
-  </div>
+  </aside>
 
   <script src="script.js"></script>
 </body>

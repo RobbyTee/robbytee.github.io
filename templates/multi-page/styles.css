@@ -40,6 +40,7 @@ p { margin: 0 0 1em; }
 .container { width: min(1140px, 100% - 32px); margin-inline: auto; }
 .section { padding: clamp(64px, 10vw, 112px) 0; }
 .section-tint { background: var(--tint); }
+.section-tint .eyebrow { color: var(--accent-dark); }  /* passes contrast on the tinted background */
 .section-head { max-width: 640px; margin-bottom: 40px; }
 .eyebrow {
   font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
@@ -108,7 +109,7 @@ p { margin: 0 0 1em; }
 .visit-intro p:last-child { color: rgba(246,239,230,.75); }
 .visit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .info { padding: 28px; border-radius: var(--radius); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); }
-.info h3 { font-family: var(--font-body); font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #f3c9a6; }
+.info h2, .info h3 { font-family: var(--font-body); font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #f3c9a6; }
 .info address { font-style: normal; font-size: 1.15rem; margin-bottom: 14px; }
 .info p { margin: 0 0 8px; }
 .info a { color: var(--on-dark); }
@@ -203,7 +204,7 @@ p { margin: 0 0 1em; }
    Google-style reviews
    ========================================================== */
 .g-reviews {
-  --g-text: #202124; --g-muted: #70757a; --g-line: #dadce0; --g-star: #fbbc04; --g-blue: #1a73e8;
+  --g-text: #202124; --g-muted: #5f6368; --g-line: #dadce0; --g-star: #fbbc04; --g-blue: #1a73e8;
   font-family: "Roboto", var(--font-body);
   color: var(--g-text);
 }
@@ -265,7 +266,7 @@ p { margin: 0 0 1em; }
 /* Visit page */
 .visit-page .visit-grid .info { background: #fff; border-color: rgba(42, 33, 28, .1); box-shadow: var(--shadow); }
 .visit-page .info a, .visit-page .info address { color: var(--ink); }
-.visit-page .info h3 { color: var(--accent); }
+.visit-page .info h2, .info h3 { color: var(--accent); }
 .visit-page .hours dt { color: var(--muted); }
 .visit-page .info-big:hover, .visit-page .info-link:hover { color: var(--accent); }
 
@@ -282,3 +283,13 @@ p { margin: 0 0 1em; }
   .g-actions .g-btn { flex: 1 1 auto; }
 }
 .g-more[hidden] { display: none; }
+
+/* Accessibility: skip link (hidden until focused) and a visible keyboard focus ring */
+.skip-link {
+  position: absolute; left: 16px; top: -100px; z-index: 100;
+  background: var(--ink); color: #fff; padding: 12px 18px; border-radius: 10px;
+  font-weight: 700; text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+#main:focus { outline: none; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }

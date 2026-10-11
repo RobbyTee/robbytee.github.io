@@ -3,8 +3,8 @@
    the whole page.
    ========================================================== */
 :root {
-  --accent: #0f8a7e;        /* buttons, checks, highlights */
-  --accent-dark: #0b6b62;
+  --accent: #0b7a70;        /* buttons, checks, highlights (white text on it passes WCAG AA) */
+  --accent-dark: #085e56;
   --tint: #e3f4f1;          /* soft accent background */
   --sky: #bfe3f2;           /* hero illustration windows */
   --sun: #f2b544;           /* sparkles */
@@ -46,6 +46,7 @@ small { font-size: .78em; }
 .narrow { width: min(820px, 100% - 32px); }
 .section { padding: clamp(64px, 9vw, 104px) 0; }
 .section-tint { background: var(--tint); }
+.section-tint .eyebrow { color: var(--accent-dark); }
 .section-dark { background: var(--dark); color: var(--on-dark); }
 .section-dark a { color: #8fe0d5; }
 .section-head { max-width: 720px; margin-bottom: 32px; }
@@ -127,7 +128,9 @@ small { font-size: .78em; }
   transition: opacity .2s, border-color .2s;
 }
 .room:has(input:checked), .room:not(.is-off) { border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
-.room.is-off .services { opacity: .55; }
+/* rooms set to 0: muted, but still readable (fading with opacity failed contrast) */
+.room.is-off .service-label, .room.is-off .price { color: var(--muted); }
+.room.is-off input:checked + .check { background: #9db4b8; border-color: #9db4b8; }
 .room-head { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #fff, var(--paper)); }
 .room-icon { flex: none; width: 42px; height: 42px; border-radius: 12px; background: var(--tint); display: grid; place-items: center; }
 .room-icon svg { width: 24px; height: 24px; fill: none; stroke: var(--accent-dark); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
@@ -314,3 +317,12 @@ input:focus-visible + .check { outline: 3px solid var(--sun); outline-offset: 2p
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Accessibility: skip link (hidden until focused) and a visible keyboard focus ring */
+.skip-link {
+  position: absolute; left: 16px; top: -100px; z-index: 100;
+  background: var(--ink); color: #fff; padding: 12px 18px; border-radius: 10px;
+  font-weight: 700; text-decoration: none;
+}
+.skip-link:focus { top: 12px; }
+#main:focus { outline: none; }

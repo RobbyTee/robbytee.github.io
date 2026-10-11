@@ -473,6 +473,16 @@ links.addEventListener('click', (e) => {
     toggle.setAttribute('aria-label', 'Open menu');
   }
 });
+
+// Escape closes the mobile menu and returns focus to the menu button
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && links.classList.contains('open')) {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.focus();
+  }
+});
 document.querySelectorAll('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
 renderRooms();
