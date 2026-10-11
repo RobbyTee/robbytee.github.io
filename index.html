@@ -170,19 +170,20 @@
           <input type="hidden" name="_next" value="https://robbytee.github.io/?sent=1#contact">
           <!-- spam trap: real visitors never see or fill this -->
           <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="form-key"><span class="req" aria-hidden="true">*</span> Required field</p>
           <p class="form-success" id="form-success" role="status" hidden>Thanks! Your message is on its way. We'll reply within one business day.</p>
           <p class="form-error" id="form-error" role="alert" hidden></p>
-          <label>Name<input name="name" required autocomplete="name"></label>
-          <label>Email<input type="email" name="email" required autocomplete="email"></label>
-          <label>What do you need?
-            <select name="service">
+          <label><span>Name <span class="req" aria-hidden="true">*</span></span><input name="name" required autocomplete="name"></label>
+          <label><span>Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="email" required autocomplete="email"></label>
+          <label><span>What do you need? <span class="req" aria-hidden="true">*</span></span>
+            <select name="service" required>
               <option>A new website</option>
               <option>A redesign</option>
               <option>Hosting for an existing site</option>
               <option>Something else</option>
             </select>
           </label>
-          <label>Message<textarea name="message" rows="4" required></textarea></label>
+          <label><span>Message <span class="req" aria-hidden="true">*</span></span><textarea name="message" rows="4" required></textarea></label>
           <button class="btn" type="submit">Send message</button>
         </form>
       </div>
