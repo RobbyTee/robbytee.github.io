@@ -8,6 +8,15 @@ toggle.addEventListener("click", () => {
   nav.classList.toggle("open", !open);
 });
 
+// Close the menu with Escape and return focus to the button
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && nav.classList.contains("open")) {
+    toggle.setAttribute("aria-expanded", "false");
+    nav.classList.remove("open");
+    toggle.focus();
+  }
+});
+
 // Close the menu after picking a section
 nav.addEventListener("click", (e) => {
   if (e.target.closest("a")) {
