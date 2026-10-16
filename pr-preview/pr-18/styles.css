@@ -219,7 +219,6 @@ h3 { font-size: 1.3rem; }
 .stars { color: var(--gold); font-size: 1.5rem; letter-spacing: .1em; line-height: 1; margin-bottom: 14px; }
 .star-off { color: var(--line); }
 .review-text { margin: 0 0 18px; flex: 1; }
-.review-text.placeholder { color: var(--muted); font-style: italic; }
 .review-by { margin: 0; font-family: var(--head); font-size: 1.1rem; text-transform: uppercase; letter-spacing: .03em; color: var(--navy); }
 
 /* Contact */
