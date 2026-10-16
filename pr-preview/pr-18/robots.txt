@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /pr-preview/
 
-Sitemap: https://robbytee.github.io/sitemap.xml
+Sitemap: https://chamberlaincfo.com/sitemap.xml
