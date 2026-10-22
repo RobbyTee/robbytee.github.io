@@ -266,3 +266,17 @@ h3 { font-size: 1.3rem; }
 .required { color: #a3261b; font-weight: 700; }
 .form-note { margin: 0 0 14px; font-size: .9rem; color: var(--muted); }
 main:focus { outline: none; }
+
+/* Contact form confirmation and error messages */
+.form-success, .form-error {
+  margin: 0 0 16px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.form-success { background: #e4f3ea; border-left: 4px solid #2e7d4f; }
+.form-error { background: #fbe6e2; border-left: 4px solid #a3261b; }
+.form-success[hidden], .form-error[hidden] { display: none; }
+.btn:disabled { opacity: .7; cursor: wait; }
+.form-success, .form-error { scroll-margin-top: 90px; }
