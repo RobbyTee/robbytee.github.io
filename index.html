@@ -231,10 +231,17 @@
           <p class="contact-email">Or email <a href="mailto:contact@chamberlaincfo.com">contact@chamberlaincfo.com</a></p>
           <p class="contact-note">All services available remotely.</p>
         </div>
-        <form class="contact-form" aria-label="Contact form" action="https://formsubmit.co/contact@chamberlaincfo.com" method="POST">
+        <!-- FormSubmit: script.js sends this through FormSubmit's AJAX endpoint so visitors stay on the page.
+             The plain POST is the fallback when JavaScript is off. -->
+        <form class="contact-form" id="contact-form" aria-label="Contact form" action="https://formsubmit.co/contact@chamberlaincfo.com" method="POST">
           <p class="form-note"><span class="required" aria-hidden="true">*</span> Required</p>
+          <p class="form-success" id="form-success" role="status" hidden>Thanks! Your message is on its way. We'll get back to you shortly.</p>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
           <input type="hidden" name="_subject" value="New inquiry from the Chamberlain website">
           <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <!-- script.js points _next back at this page so the no-JavaScript fallback also returns here -->
+          <input type="hidden" name="_next" value="https://chamberlaincfo.com/?sent=1#contact">
           <div class="hp" aria-hidden="true"><label for="hp-field">Leave this field empty</label><input id="hp-field" type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
           <div class="field">
             <label for="name">Your name <span class="required" aria-hidden="true">*</span></label>
