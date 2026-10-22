@@ -230,6 +230,8 @@ h3 { font-size: 1.3rem; }
 .contact-copy p { opacity: .95; }
 .contact-phone { font-size: 1.3rem; font-weight: 600; }
 .contact-phone a { color: var(--gold); white-space: nowrap; }
+.contact-email { font-size: 1.1rem; font-weight: 600; }
+.contact-email a { color: var(--gold); overflow-wrap: anywhere; }
 .contact-note { font-size: .95rem; opacity: .75 !important; }
 .x-logo { width: 18px; height: 18px; fill: currentColor; }
 
